@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/mean-project'));
+app.use(express.static('./dist/frontend'));
 
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/dist/mean-project/index.html'));
+    res.sendFile(path.join(__dirname, '/dist/frontend/index.html'));
 });
 
 app.listen(process.env.PORT || 8080, () => {
